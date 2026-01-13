@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phishing Simulation Notice</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Courier New", Courier, monospace;
+        background: radial-gradient(circle at top, #0b1a0b 0%, #060806 55%, #050605 100%);
+        color: #9dff9d;
+      }
+      .noise {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 2px 2px, 3px 3px;
+        mix-blend-mode: screen;
+        opacity: 0.2;
+      }
+      .scanlines {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.1) 0px,
+          rgba(0, 0, 0, 0.1) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+        opacity: 0.45;
+      }
+      .page {
+        max-width: 760px;
+        margin: 10vh auto;
+        padding: 36px;
+        border: 1px solid #1f5220;
+        background: rgba(3, 8, 3, 0.9);
+        box-shadow: 0 0 25px rgba(43, 255, 128, 0.12);
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-shadow: 0 0 8px rgba(83, 255, 160, 0.5);
+      }
+      p {
+        margin: 0 0 14px;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+      .detail {
+        color: #6fca6f;
+        font-size: 14px;
+      }
+      .prompt {
+        color: #74ff74;
+      }
+      .prompt::before {
+        content: ">> ";
+        color: #34c534;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <main class="page" role="main" aria-live="polite">
+      <h1>This Was a Phishing Simulation</h1>
+      <p class="prompt">
+        You just participated in a security awareness exercise. The login
+        details you entered were not collected or stored.
+      </p>
+      <p class="prompt">
+        Real phishing attempts try to steal credentials by looking like trusted
+        services. If anything felt unusual, please report it to your security
+        team.
+      </p>
+      <p class="detail">
+        Thanks for helping keep our organization safe.
+      </p>
+    </main>
+  </body>
+</html>
